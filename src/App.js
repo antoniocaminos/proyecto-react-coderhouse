@@ -1,14 +1,15 @@
 import './App.css';
-import { ItemListContainer } from './Components/ItemListContainer';
+//import { ItemListContainer } from './Components/ItemListContainer';
 import { NavBar } from './Components/NavBar';
-
+import { ItemDetailContainer } from './Components/ItemDetailContainer';
 function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer texto="Bienvenido Humano!"/>
+      <ItemDetailContainer />
     </>
   );
 }
 
 export default App;
+/* <ItemListContainer texto="Bienvenido Humano!"/> */
