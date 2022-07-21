@@ -6,6 +6,7 @@ const foodSolo = {id: '1', name: "burger", description: "es una hamburguesa", pr
 
 export const ItemDetailContainer = () => {
   const [data, setData] = useState({});
+
   useEffect(() => {
     const getData = new Promise(resolve => {
         setTimeout(() => {
@@ -16,10 +17,7 @@ export const ItemDetailContainer = () => {
   }, [])
 
   return (
-    <>
         <ItemDetail data={data} />
-    </>
   );
 }
 export default ItemDetailContainer 
-/* <ItemDetail /> */

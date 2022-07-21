@@ -16,10 +16,13 @@ const foods = [
   {id: "8", name: "ice_a", description: "es un helado", price: "90", imgage: 'https://www.pngfind.com/pngs/m/626-6263468_hamburguesa-bacon-clasica-hamburguesa-imagenes-de-hamburguesas-png.png',  stock: "25" , category: "dessert"},
   ];
 export const ItemListContainer = ({texto}) => {
-
-  const [ data, setData] = useState([]);
   
-  const { categoryId } = useParams();
+  const [data, setData] = useState([]);
+
+
+  const {categoryId} = useParams();
+
+
 
   useEffect(() => { 
     const getData = new Promise(resolve => {
@@ -28,11 +31,12 @@ export const ItemListContainer = ({texto}) => {
       }, 1500);
   });
   if (categoryId){
-    getData.then(res => res.filter(foods => foods.category === categoryId))
-  }else{
-    getData.then(res => setData(res));
-  }
+    getData.then(res =>setData (res.filter(foods => foods.category === categoryId)));
+        }else{
+    getData.then(res =>setData (res));
+    }
   }, [categoryId]);
+  
   const onAdd = (quantity) => {
   console.log(`compraste ${quantity} unidades`);
   }
