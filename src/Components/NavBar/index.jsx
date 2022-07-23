@@ -13,7 +13,7 @@ export const NavBar = () => {
         <ul className="nav-list">
             <li><Link to='/category/burger' className='cat1'>Hamburgesas</Link></li>
             <li><Link to='/category/fries' className='cat2'>Papas</Link></li>
-            <li><Link to='/category/drinks' className='cat3'>Bebidas</Link></li>
+            <li><Link to='/category/drink' className='cat3'>Bebidas</Link></li>
             <li><Link to='/category/dessert' className='cat4'>Helados</Link></li>
             <li><Link to='/Cart' className='cat5'><CartWidget /></Link></li>
         </ul>

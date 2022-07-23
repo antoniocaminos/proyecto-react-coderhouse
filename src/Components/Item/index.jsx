@@ -1,14 +1,16 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
+
 import './ItemList.css'
 
-const Item = ({info}) => {
+const Item = ( { info } )  => {
+
   return (
-        <a href='/'className='food'>
+        <Link to={`/detail/${info.id}`}>
             <img src={info.imgage} alt="es comida" />
             <p>{info.name}</p>
             <p>$: {info.price}</p>
             <p>{info.description}</p>
-        </a>
+        </Link>
     )
 }
-export default Item
+export default Item; 
