@@ -1,14 +1,16 @@
 import React from 'react'
+
 import './ItemDetail.css'
 
-export const ItemDetail = ( { data }) => {
+
+export const ItemDetail = ( { data } ) => {
   return (
     <div className='container'>
         <div className='detail'>
-          <img className='detail_image' scr={data.image} alt={data.name} />
+          <img src={data.imgage} alt={data.name} />
             <div className='content'>
               <h2>{data.name}</h2>
-              {console.log(data)}
+              <p>{data.description}</p>
             </div>
         </div>
       </div>);   
