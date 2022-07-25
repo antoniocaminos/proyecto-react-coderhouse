@@ -26,7 +26,8 @@ export const ItemDetailContainer = () => {
         }, 3000);
     });
     getData.then(res => setData(res.find(foods => foods.id === parseInt(detailId))));
-  }, [detailId]);
+  }, [detailId])
+  
   return (
         <ItemDetail data={data} />
   );
